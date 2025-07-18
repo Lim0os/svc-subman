@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "e0de421e-c42a-4590-a760-77577652cd71",
+		"name": "svc-subman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26186274"
+	},
+	"item": [
+		{
+			"name": "create subscribe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"service_name\": \"Netflix Premium\",\n  \"price\": 15,\n  \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n  \"start_date\": \"01-2024\",\n  \"end_date\": \"12-2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/subscribe",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"subscribe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sucess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"service_name\": \"Netflix Premium\",\n  \"price\": 15,\n  \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n  \"start_date\": \"01-2024\",\n  \"end_date\": \"12-2024\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/subscribe",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 16:59:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": \"30d548cb-caa5-4866-bdbe-22c7e93f745a\"\n}"
+				},
+				{
+					"name": "error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"service_name\": \"Netflix Premium\",\n  \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n  \"start_date\": \"01-2024\",\n  \"end_date\": \"12-2024\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/subscribe",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribe"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 17:00:26 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "145"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"error\": \"Key: 'CreateSubscriptionRequest.Price' Error:Field validation for 'Price' failed on the 'required' tag\",\n    \"details\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "delete subscriber",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ids\": [\n        \"688164ab-354a-4908-ae66-5a3d53908361\",\n        \"1ba5eb71-94b9-4f33-a2f8-77b85f52c9c9\"\n        \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/subscribe",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"subscribe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"688164ab-354a-4908-ae66-5a3d53908361\",\n        \"1ba5eb71-94b9-4f33-a2f8-77b85f52c9c9\"\n        \n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/subscribe",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 17:31:25 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": \"All subscribers have been deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "agree subscribe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/subscribe/cost?user_id=a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2&service_name=Netflix Premium12&start_date=01-2024&end_date=02-2025",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"subscribe",
+						"cost"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2"
+						},
+						{
+							"key": "service_name",
+							"value": "Netflix Premium12"
+						},
+						{
+							"key": "start_date",
+							"value": "01-2024"
+						},
+						{
+							"key": "end_date",
+							"value": "02-2025"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subscribe/cost?user_id=a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2&service_name=Netflix Premium12&start_date=01-2024&end_date=02-2025",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribe",
+								"cost"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2"
+								},
+								{
+									"key": "service_name",
+									"value": "Netflix Premium12"
+								},
+								{
+									"key": "start_date",
+									"value": "01-2024"
+								},
+								{
+									"key": "end_date",
+									"value": "02-2025"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 19:44:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": 100000\n}"
+				},
+				{
+					"name": "error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subscribe/cost?user_id=a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2&service_name=Netflix Premium12&start_date=01-2024",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribe",
+								"cost"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2"
+								},
+								{
+									"key": "service_name",
+									"value": "Netflix Premium12"
+								},
+								{
+									"key": "start_date",
+									"value": "01-2024"
+								},
+								{
+									"key": "end_date",
+									"value": "02-2025",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 19:44:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"error\": \"failed to get ent_date\",\n    \"details\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "get subscribes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/subscribes?user_id&service_name=Netflix Premium12&limit=10&offset=0",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"subscribes"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": null
+						},
+						{
+							"key": "service_name",
+							"value": "Netflix Premium12"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subscribes?user_id&service_name=Netflix Premium&limit=10&offset=0",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribes"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": null
+								},
+								{
+									"key": "service_name",
+									"value": "Netflix Premium"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 19:55:49 GMT"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"af7a4ff5-6ce9-48d8-bf4e-ea28b005fadb\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"2024-12-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"fd57aa6f-88a7-4b04-9477-2bdeb3f3f20d\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"2024-12-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"a470dc53-2658-428f-8ac7-0c91f1e77ae2\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"2024-12-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"6eed7d72-8a00-49dc-b5a0-1237959cfef7\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"2024-12-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"0577ae90-6df1-4d48-833b-a0cc821d2bef\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"2024-12-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"cd904cbf-d629-4b2f-9b4c-b08570b22bbd\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"2024-12-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"411fe711-e2bd-4069-b070-f8078dc6f931\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"2024-12-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"d5760810-5ae6-4eb4-8947-92eed1da3eaa\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"2024-12-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"31110cd2-0ed0-482f-9002-efafd17c003a\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"2024-01-01T00:00:00Z\",\n            \"end_date\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"37df5f72-8cea-4b81-9b82-b8997fc277f5\",\n            \"service_name\": \"Netflix Premium\",\n            \"price\": 15,\n            \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n            \"start_date\": \"0001-01-01T00:00:00Z\",\n            \"end_date\": \"0001-01-01T00:00:00Z\"\n        }\n    ],\n    \"meta\": 200\n}"
+				},
+				{
+					"name": "error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subscribes?user_id&service_name=Netflix Premium&limit=10",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribes"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": null
+								},
+								{
+									"key": "service_name",
+									"value": "Netflix Premium"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 19:57:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"error\": \"failed to get offset\",\n    \"details\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "get subscribe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/subscribe/df73e03e-ea64-415e-a1e0-222eeb137a1c",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"subscribe",
+						"df73e03e-ea64-415e-a1e0-222eeb137a1c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subscribe/df73e03e-ea64-415e-a1e0-222eeb137a1c",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribe",
+								"df73e03e-ea64-415e-a1e0-222eeb137a1c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 19:58:37 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "247"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"df73e03e-ea64-415e-a1e0-222eeb137a1c\",\n        \"service_name\": \"Netflix Premium\",\n        \"price\": 15,\n        \"user_id\": \"a1b2c3dx-e5f6-7890-g1h2-i3j4k5l6m7n2\",\n        \"start_date\": \"2024-01-01T00:00:00Z\",\n        \"end_date\": \"2024-12-01T00:00:00Z\"\n    },\n    \"meta\": 200\n}"
+				},
+				{
+					"name": "error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subscribe/df73e03e-ea64-415e-a1e0",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subscribe",
+								"df73e03e-ea64-415e-a1e0"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Jul 2025 19:59:16 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"error\": \"params id is not valid uuid\",\n    \"details\": 400\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
